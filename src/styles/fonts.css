@@ -1,0 +1,7 @@
+/* Import Neue Montreal font */
+@import url('https://fonts.cdnfonts.com/css/neue-montreal');
+
+/* Force all text to never be italic */
+* {
+  font-style: normal !important;
+}

@@ -1,0 +1,112 @@
+/* Print-specific styles for PDF export */
+@media print {
+  /* Hide navigation and unnecessary UI elements */
+  nav,
+  header,
+  .no-print {
+    display: none !important;
+  }
+
+  /* Reset page layout */
+  body {
+    background: white !important;
+    margin: 0;
+    padding: 0;
+  }
+
+  /* Optimize page content */
+  .print-container {
+    max-width: 100%;
+    padding: 0.5in;
+    margin: 0;
+  }
+
+  /* Remove background colors and borders for print */
+  .bg-slate-900\/50,
+  .bg-slate-900 {
+    background: white !important;
+    border: 1px solid #e5e7eb !important;
+  }
+
+  /* Ensure text is black for printing */
+  .text-white {
+    color: #000 !important;
+  }
+
+  .text-gray-300,
+  .text-gray-400 {
+    color: #4b5563 !important;
+  }
+
+  .text-cyan-400,
+  .text-cyan-300 {
+    color: #0891b2 !important;
+  }
+
+  /* Remove shadows and effects */
+  .shadow-lg,
+  .shadow-cyan-500\/20 {
+    box-shadow: none !important;
+  }
+
+  /* Optimize spacing for print */
+  .pt-32 {
+    padding-top: 1rem !important;
+  }
+
+  .mb-12 {
+    margin-bottom: 1rem !important;
+  }
+
+  .mb-8 {
+    margin-bottom: 0.75rem !important;
+  }
+
+  /* Ensure proper page breaks */
+  .bg-slate-900\/50 {
+    page-break-inside: avoid;
+  }
+
+  /* Hide buttons in print */
+  button {
+    display: none !important;
+  }
+
+  /* Make headshot smaller for print */
+  img[alt="Jason Jiaxin Xu"] {
+    width: 80px !important;
+    height: 80px !important;
+  }
+
+  /* Adjust heading sizes for print */
+  h1 {
+    font-size: 2rem !important;
+  }
+
+  h2 {
+    font-size: 1.25rem !important;
+  }
+
+  h3 {
+    font-size: 1.1rem !important;
+  }
+
+  /* Optimize skill tags for print */
+  .bg-cyan-600\/20 {
+    background: #e0f2fe !important;
+    color: #0891b2 !important;
+    border: 1px solid #0891b2 !important;
+  }
+
+  /* Ensure links are visible */
+  a {
+    text-decoration: none !important;
+    color: #0891b2 !important;
+  }
+
+  /* Page break settings */
+  @page {
+    margin: 0.5in;
+    size: letter;
+  }
+}
