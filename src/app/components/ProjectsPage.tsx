@@ -9,6 +9,7 @@ import imgSmoothCriminals from "figma:asset/9f8ff115dd1b5cf4571ab004139bfb4743bb
 import imgEncounter from "figma:asset/ede4eb82e423235da459a3a9c9ff3df40ca8e3b1.png";
 import imgShadesOfThePast from "figma:asset/696281b8280b6fa1d6c3fb24e7caca7d444ac7c2.png";
 import imgFrankLloydWright from "figma:asset/86dbfbf3c2652728b06ac820d1bb4fe064cae795.png";
+import imgProjectC from "figma:asset/2ac29f7b60a780864d25b8273994e1fdee49e811.png";
 
 const projects = [
   {
@@ -94,22 +95,22 @@ const projects = [
   {
     id: '9',
     title: 'Project C',
-    type: 'Narrative RPG',
-    description: 'Story-driven fantasy RPG with branching narratives, tactical combat, and meaningful player choices.',
-    image: 'https://images.unsplash.com/photo-1629113425691-96947e1bb2b2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxmYW50YXN5JTIwcnBnJTIwbWVkaWV2YWwlMjBjYXN0bGV8ZW58MXx8fHwxNzY5NTg1OTM1fDA&ixlib=rb-4.1.0&q=80&w=1080',
-    date: '2023',
-    team: '25 members',
-    tags: ['RPG', 'Branching Narrative', 'Tactical Combat']
+    type: 'Art Level Demo',
+    description: 'A vertical slice and art demo showcasing a story level from an adventure RPG set in the world of ancient Nordic mythology.',
+    image: imgProjectC,
+    date: '2024',
+    team: '5 members',
+    tags: ['Art Demo', 'Level Design', 'Concept Art']
   },
   {
     id: '10',
-    title: 'AR Quest: City Explorer',
+    title: 'Experiments in Mobile AR',
     type: 'AR Mobile Game',
-    description: 'Location-based augmented reality adventure that transforms real-world exploration into epic quests.',
-    image: 'https://images.unsplash.com/photo-1650573547848-d7b93ed79782?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxhdWdtZW50ZWQlMjByZWFsaXR5JTIwbW9iaWxlJTIwcGhvbmV8ZW58MXx8fHwxNzY5NTkyODYwfDA&ixlib=rb-4.1.0&q=80&w=1080',
-    date: '2024',
-    team: '12 members',
-    tags: ['AR', 'Location-Based', 'Social Multiplayer']
+    description: 'Showcase little AR experiments I did for an NYU ITP class about AR using Unity and AR developer tools.',
+    image: 'https://img.youtube.com/vi/DmLkDwK7Kd0/maxresdefault.jpg',
+    date: '2021',
+    team: 'Jason Xu',
+    tags: ['AR', 'Unity']
   }
 ];
 

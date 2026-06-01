@@ -44,6 +44,20 @@ import imgTechArchitecture from "figma:asset/60285b23194c8b2be2aa4af945d0e2c431a
 import gifEchoing from "figma:asset/9b3809122ccac06216944add973e175b674d5a2c.png";
 import gifPainting from "figma:asset/b6cdfd9a6280f49066f61c750c636b9b52b3aa93.png";
 import gifRecharging from "figma:asset/d264c6b1c206f457c21a54bb3db16bb9353bb1af.png";
+import imgProjectCGallery1 from "figma:asset/2ac29f7b60a780864d25b8273994e1fdee49e811.png";
+import imgProjectCGallery2 from "figma:asset/df1e4d7e0b28462c0f893657212bbeaaf103313d.png";
+import imgProjectCGallery3 from "figma:asset/22512569dfe6c4ea8a367843dc1202b5223744de.png";
+import imgProjectCGallery4 from "figma:asset/37eb66043ebcd711e6c950eba07ae7d004268461.png";
+import imgProjectCGallery5 from "figma:asset/d847060d9faf047fdb1c4e9f8bc974bbfef38066.png";
+import imgProjectCGallery6 from "figma:asset/eaafd51106cef5f0d91bbb44ec7f09b45392e17a.png";
+import imgProjectCGallery7 from "figma:asset/604483944dcc28dea56035850f414639538ce23e.png";
+import imgProjectCGallery8 from "figma:asset/0822334a870900fc3b855a5805340318571f9c84.png";
+import imgProjectCGallery9 from "figma:asset/79440c2dff7282fed7b20529097eafb2c7142bf7.png";
+import imgProjectCGallery10 from "figma:asset/3e2b6ecf965f455ddb6f03104cc76605f59fc7b5.png";
+import imgProjectCGallery11 from "figma:asset/d76790395d68737d3be2094cdebb8ad1d59a3e39.png";
+import imgProjectCGallery12 from "figma:asset/0e45da71b09088dcb6c63360577ee9c8662e7863.png";
+import imgProjectCGallery13 from "figma:asset/1bbebe81a166ef2c6bed9fae4a29b0f2be6427c0.png";
+import imgProjectCGallery14 from "figma:asset/c51355c3a6ee802fe10857ad206028cd959d3f3d.png";
 
 const projectData: Record<string, any> = {
   '1': {
@@ -278,26 +292,59 @@ const projectData: Record<string, any> = {
     type: 'AR Mobile Game',
     description: 'Location-based augmented reality adventure that transforms real-world exploration into epic quests.',
     image: 'https://images.unsplash.com/photo-1650573547848-d7b93ed79782?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxhdWdtZW50ZWQlMjByZWFsaXR5JTIwbW9iaWxlJTIwcGhvbmV8ZW58MXx8fHwxNzY5NTkyODYwfDA&ixlib=rb-4.1.0&q=80&w=1080',
+    videoCover: imgProjectCGallery1,
     date: '2024',
-    duration: '8 months',
-    team: '12 members',
-    role: 'AR Experience Designer',
+    duration: '2 months',
+    team: '5 members',
+    role: 'Designer',
     platform: 'iOS & Android',
-    overview: 'AR Quest: City Explorer reimagines urban exploration by overlaying fantasy adventures onto real-world locations. Using advanced AR technology and geolocation features, players embark on quests that blend seamlessly with their physical environment. Parks become enchanted forests, landmarks transform into ancient ruins, and city streets hide magical creatures. The game encourages outdoor activity and local discovery while delivering engaging narrative content and social multiplayer features.',
+    overview: 'Project C is a vertical slice and art demo showcasing a story level from an adventure RPG set in the world of ancient Nordic mythology. Developed during my time as a game designer in Beijing in 2016, the level demonstrates cinematic pacing, architectural world-building, and the integration of narrative beats within explorable spaces, serving as both a proof-of-concept for gameplay systems and a showcase of visual direction inspired by Norse legends.',
     responsibilities: [
-      'Designed AR interaction mechanics for creature encounters, object collection, and environmental puzzles',
-      'Created adaptive quest system that generates location-appropriate content based on real-world geography',
-      'Developed social multiplayer features including co-op quests and competitive AR battles',
-      'Collaborated with artists to design creatures and effects optimized for mobile AR performance',
-      'Implemented safety features and player guidance systems for outdoor AR gameplay'
+      'Designed the complete story level, including cinematic pacing, architectural layout, and environmental storytelling beats within the Nordic mythology setting.',
+      'Created concept art sketches and storyboards to visualize the level flow, key narrative moments, and visual direction.'
     ],
-    achievements: [
-      'Featured by Apple as "App of the Day"',
-      '1M+ active monthly users',
-      'Winner - Best Use of AR Technology at AIXR Awards 2024',
-      'Partnership with 50+ cities for location-based events'
+    technologies: ['Unreal Engine', 'Autodesk Maya', 'Adobe Photoshop'],
+    videoUrl: 'https://www.youtube.com/embed/sLyIvgliN_g',
+    galleryImages: [
+      imgProjectCGallery1,
+      imgProjectCGallery2,
+      imgProjectCGallery3,
+      imgProjectCGallery4,
+      imgProjectCGallery5,
+      imgProjectCGallery6,
+      imgProjectCGallery7,
+      imgProjectCGallery8,
+      imgProjectCGallery9,
+      imgProjectCGallery10,
+      imgProjectCGallery11,
+      imgProjectCGallery12,
+      imgProjectCGallery13,
+      imgProjectCGallery14
+    ]
+  },
+  '10': {
+    id: '10',
+    title: 'Experiments in Mobile AR',
+    type: 'AR Experiments',
+    description: 'Showcase little AR experiments I did for an NYU ITP class about AR using Unity and AR developer tools.',
+    image: 'https://images.unsplash.com/photo-1650573547848-d7b93ed79782?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxhdWdtZW50ZWQlMjByZWFsaXR5JTIwbW9iaWxlJTIwcGhvbmV8ZW58MXx8fHwxNzY5NTkyODYwfDA&ixlib=rb-4.1.0&q=80&w=1080',
+    videoCover: 'https://img.youtube.com/vi/DmLkDwK7Kd0/maxresdefault.jpg',
+    date: '2021',
+    duration: '1 semester',
+    team: 'Jason Xu',
+    role: 'AR Developer',
+    platform: 'iOS & Android',
+    overview: 'A collection of experimental mobile AR applications developed during an NYU ITP course on augmented reality. These projects explore various AR concepts and techniques including marker-based tracking, plane detection, image recognition, and interactive 3D object placement. Each experiment demonstrates different AR capabilities and interaction paradigms, showcasing the potential of mobile AR technology to blend digital content with the physical world.',
+    responsibilities: [
+      'Developed multiple AR prototypes exploring different tracking methods and interaction techniques.',
+      'Implemented marker-based AR experiences using image targets.'
     ],
-    technologies: ['Unity', 'ARCore', 'ARKit', 'Google Maps API', 'Photon Unity Networking', 'Mapbox SDK']
+    technologies: ['Unity', 'ARCore', 'ARKit', 'C#', 'Vuforia', 'AR Foundation'],
+    videoUrl: 'https://www.youtube.com/embed/DmLkDwK7Kd0',
+    galleryVideos: [
+      { url: 'https://www.youtube.com/embed/ihcdv6yrXtg', start: 0 },
+      { url: 'https://www.youtube.com/embed/NC0BXT01Qio', start: 0 }
+    ]
   }
 };
 
@@ -494,12 +541,13 @@ export function ProjectDetail() {
             </div>
 
             {/* Achievements / Timeline */}
-            <div className="bg-slate-900/50 rounded-xl p-4 sm:p-6 lg:p-8 border border-cyan-500/20">
-              <h2 className="text-xl sm:text-2xl font-bold text-white mb-6">
-                {id === '3' ? 'Project Timeline' : 'Achievements'}
-              </h2>
-              
-              {id === '3' ? (
+            {project.achievements && (
+              <div className="bg-slate-900/50 rounded-xl p-4 sm:p-6 lg:p-8 border border-cyan-500/20">
+                <h2 className="text-xl sm:text-2xl font-bold text-white mb-6">
+                  {id === '3' ? 'Project Timeline' : 'Achievements'}
+                </h2>
+                
+                {id === '3' ? (
                 <div className="relative pl-6 sm:pl-8 space-y-6 sm:space-y-8">
                   {/* Vertical line with gradient */}
                   <div className="absolute left-2 sm:left-3 top-2 bottom-2 w-[2px] bg-gradient-to-b from-cyan-500/50 via-cyan-500/30 to-cyan-400/50"></div>
@@ -560,12 +608,13 @@ export function ProjectDetail() {
                   ))}
                 </ul>
               )}
-            </div>
+              </div>
+            )}
 
             {/* Screenshots */}
             <div className="bg-slate-900/50 rounded-xl p-4 sm:p-6 lg:p-8 border border-cyan-500/20">
               <h2 className="text-xl sm:text-2xl font-bold text-white mb-4">
-                {project.galleryVideos ? 'In Game Cinematics' : (id === '2' ? 'The Experience' : (id === '8' ? 'Gallery' : (id === '3' ? 'Development Journey' : 'Details')))}
+                {id === '10' ? 'Others' : (project.galleryVideos ? 'In Game Cinematics' : (id === '2' ? 'The Experience' : (id === '8' ? 'Gallery' : (id === '3' ? 'Development Journey' : 'Details'))))}
               </h2>
               {id === '6' && (
                 <h3 className="text-base sm:text-lg text-cyan-400 mb-4">Thesis Presentation</h3>
@@ -1123,6 +1172,10 @@ export function ProjectDetail() {
                       </div>
                     </div>
                   </>
+                ) : id === '3' ? (
+                  <div className="text-gray-400 text-center py-8">
+                    {/* No additional content for Courtyard */}
+                  </div>
                 ) : (
                   <>
                     <div className="aspect-video rounded-lg overflow-hidden bg-black">
@@ -1134,7 +1187,7 @@ export function ProjectDetail() {
                         allowFullScreen
                       ></iframe>
                     </div>
-                    
+
                     {/* Path of Light detailed explanation */}
                     {id === '2' && (
                       <div className="space-y-6 text-gray-300 mt-6">
