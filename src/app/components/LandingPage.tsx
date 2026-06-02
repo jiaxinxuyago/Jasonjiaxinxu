@@ -4,30 +4,37 @@ import imgAsgardsWrath2 from "figma:asset/50c3d4f7056af475f30494dd1c187616894334
 import imgPathOfLight from "figma:asset/444aac399f2a31e92820e4ccccda80dd909e0e8c.png";
 import imgEncounter from "figma:asset/ede4eb82e423235da459a3a9c9ff3df40ca8e3b1.png";
 import imgVitaZoa from "figma:asset/b4b9c5bf9de515bbbcaf6ceec0251f7a6bb96216.png";
+import imgElementum from "figma:asset/elementum-hero.jpg";
 
 const featuredProjects = [
-  { 
-    id: '1', 
-    title: "Asgard's Wrath 2", 
-    type: 'AAA VR Title', 
+  {
+    id: '11',
+    title: 'Elementum',
+    type: 'Personal-Energy App',
+    image: imgElementum
+  },
+  {
+    id: '1',
+    title: "Asgard's Wrath 2",
+    type: 'AAA VR Title',
     image: imgAsgardsWrath2
   },
-  { 
-    id: '2', 
-    title: 'Path of Light', 
-    type: 'Interactive Installation', 
+  {
+    id: '2',
+    title: 'Path of Light',
+    type: 'Interactive Installation',
     image: imgPathOfLight
   },
-  { 
-    id: '6', 
-    title: 'ENCOUNTER', 
-    type: 'Multiplayer VR', 
+  {
+    id: '6',
+    title: 'ENCOUNTER',
+    type: 'Multiplayer VR',
     image: imgEncounter
   },
-  { 
-    id: '4', 
-    title: 'Vita Zoa', 
-    type: 'Roguelike', 
+  {
+    id: '4',
+    title: 'Vita Zoa',
+    type: 'Roguelike',
     image: imgVitaZoa
   },
 ];
@@ -91,80 +98,52 @@ export function LandingPage() {
               <div className="relative w-full h-[400px] sm:h-[500px] lg:h-[600px]">
                 {/* Grid Layout */}
                 <div className="grid grid-cols-2 gap-2 sm:gap-3 h-full">
-                  {/* Large Left - Asgard's Wrath 2 */}
-                  <Link 
+                  {/* Large Left - Elementum (featured) */}
+                  <Link
                     to={`/projects/${featuredProjects[0].id}`}
                     className="group relative overflow-hidden rounded-xl border-2 border-transparent hover:border-[#00d3f2] transition-all duration-300"
                   >
-                    <div className="absolute inset-0 overflow-hidden">
-                      <img 
-                        src={featuredProjects[0].image} 
-                        alt={featuredProjects[0].title}
-                        className="absolute h-full left-[-46.77%] max-w-none top-[-0.02%] w-[200%] object-cover group-hover:scale-110 transition-transform duration-500"
-                      />
-                    </div>
-                    
+                    <img
+                      src={featuredProjects[0].image}
+                      alt={featuredProjects[0].title}
+                      className="absolute inset-0 w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                    />
+
                     {/* Gradient overlay */}
                     <div className="absolute inset-0 bg-gradient-to-t from-[#162456] via-[rgba(22,36,86,0.6)] to-transparent opacity-60"></div>
-                    
+
+                    {/* Featured badge */}
+                    <div className="absolute top-4 left-4 z-10">
+                      <span className="px-2.5 py-1 bg-[rgba(0,146,184,0.35)] border border-[rgba(0,184,219,0.4)] rounded-full text-[#53eafd] text-[10px] sm:text-xs font-['Neue_Montreal']">Featured</span>
+                    </div>
+
                     {/* Title overlay */}
                     <div className="absolute bottom-6 left-6 right-6 z-10">
+                      <p className="text-[#53eafd] text-xs sm:text-sm mb-1 font-['Neue_Montreal']">{featuredProjects[0].type}</p>
                       <h3 className="text-white text-2xl font-bold font-['Neue_Montreal']">{featuredProjects[0].title}</h3>
                     </div>
                   </Link>
 
-                  {/* Right Column - Stacked Projects */}
-                  <div className="flex flex-col gap-3">
-                    {/* Top Right - Path of Light */}
-                    <Link 
-                      to={`/projects/${featuredProjects[1].id}`}
-                      className="group relative overflow-hidden rounded-xl border-2 border-transparent hover:border-[#00d3f2] transition-all duration-300 h-[240px]"
-                    >
-                      <img 
-                        src={featuredProjects[1].image} 
-                        alt={featuredProjects[1].title}
-                        className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
-                      />
-                      <div className="absolute inset-0 bg-gradient-to-t from-[#162456] via-[rgba(22,36,86,0.6)] to-transparent opacity-60"></div>
-                      
-                      <div className="absolute bottom-4 left-4 right-4 z-10">
-                        <h3 className="text-white text-lg font-bold font-['Neue_Montreal']">{featuredProjects[1].title}</h3>
-                      </div>
-                    </Link>
+                  {/* Right - 2x2 grid of other featured projects */}
+                  <div className="grid grid-cols-2 grid-rows-2 gap-2 sm:gap-3 h-full">
+                    {featuredProjects.slice(1, 5).map((p) => (
+                      <Link
+                        key={p.id}
+                        to={`/projects/${p.id}`}
+                        className="group relative overflow-hidden rounded-xl border-2 border-transparent hover:border-[#00d3f2] transition-all duration-300"
+                      >
+                        <img
+                          src={p.image}
+                          alt={p.title}
+                          className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                        />
+                        <div className="absolute inset-0 bg-gradient-to-t from-[#162456] via-[rgba(22,36,86,0.6)] to-transparent opacity-60"></div>
 
-                    {/* Middle Right - The Courtyard */}
-                    <Link 
-                      to={`/projects/${featuredProjects[2].id}`}
-                      className="group relative overflow-hidden rounded-xl border-2 border-transparent hover:border-[#00d3f2] transition-all duration-300 h-[170px]"
-                    >
-                      <img 
-                        src={featuredProjects[2].image} 
-                        alt={featuredProjects[2].title}
-                        className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
-                      />
-                      <div className="absolute inset-0 bg-gradient-to-t from-[#162456] via-[rgba(22,36,86,0.6)] to-transparent opacity-60"></div>
-                      
-                      <div className="absolute bottom-3 left-3 right-3 z-10">
-                        <h3 className="text-white text-sm font-bold font-['Neue_Montreal']">{featuredProjects[2].title}</h3>
-                      </div>
-                    </Link>
-
-                    {/* Bottom Right - Vita Zoa */}
-                    <Link 
-                      to={`/projects/${featuredProjects[3].id}`}
-                      className="group relative overflow-hidden rounded-xl border-2 border-transparent hover:border-[#00d3f2] transition-all duration-300 h-[170px]"
-                    >
-                      <img 
-                        src={featuredProjects[3].image} 
-                        alt={featuredProjects[3].title}
-                        className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
-                      />
-                      <div className="absolute inset-0 bg-gradient-to-t from-[#162456] via-[rgba(22,36,86,0.6)] to-transparent opacity-60"></div>
-                      
-                      <div className="absolute bottom-3 left-3 right-3 z-10">
-                        <h3 className="text-white text-sm font-bold font-['Neue_Montreal']">{featuredProjects[3].title}</h3>
-                      </div>
-                    </Link>
+                        <div className="absolute bottom-2 left-2.5 right-2.5 z-10">
+                          <h3 className="text-white text-xs sm:text-sm font-bold font-['Neue_Montreal'] leading-tight">{p.title}</h3>
+                        </div>
+                      </Link>
+                    ))}
                   </div>
                 </div>
               </div>

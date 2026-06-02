@@ -58,6 +58,17 @@ import imgProjectCGallery11 from "figma:asset/d76790395d68737d3be2094cdebb8ad1d5
 import imgProjectCGallery12 from "figma:asset/0e45da71b09088dcb6c63360577ee9c8662e7863.png";
 import imgProjectCGallery13 from "figma:asset/1bbebe81a166ef2c6bed9fae4a29b0f2be6427c0.png";
 import imgProjectCGallery14 from "figma:asset/c51355c3a6ee802fe10857ad206028cd959d3f3d.png";
+import imgElementumHero from "figma:asset/elementum-hero.jpg";
+import imgElementumWelcome from "figma:asset/elementum-01-welcome.jpg";
+import imgElementumOnboarding from "figma:asset/elementum-02-onboarding.jpg";
+import imgElementumReveal from "figma:asset/elementum-03-reveal.jpg";
+import imgElementumPillars from "figma:asset/elementum-04-pillars.jpg";
+import imgElementumReading from "figma:asset/elementum-05-reading.jpg";
+import imgElementumElemental from "figma:asset/elementum-06-elemental.jpg";
+import imgElementumToday from "figma:asset/elementum-07-today.jpg";
+import imgElementumGuidance from "figma:asset/elementum-08-guidance.jpg";
+import imgElementumCompat from "figma:asset/elementum-09-compat.jpg";
+import imgElementumWorld from "figma:asset/elementum-10-world.jpg";
 
 const projectData: Record<string, any> = {
   '1': {
@@ -345,6 +356,45 @@ const projectData: Record<string, any> = {
       { url: 'https://www.youtube.com/embed/ihcdv6yrXtg', start: 0 },
       { url: 'https://www.youtube.com/embed/NC0BXT01Qio', start: 0 }
     ]
+  },
+  '11': {
+    id: '11',
+    title: 'Elementum',
+    type: 'Mobile App · In Dev',
+    description: 'A personal-energy reading app built on the BaZi (八字 / Four Pillars) tradition — a deterministic metaphysics engine wrapped in a quiet, ink-wash reading experience.',
+    image: imgElementumHero,
+    date: 'Since 2025',
+    duration: 'In Dev',
+    team: 'Jason Xu',
+    role: 'Product Designer & Engineer',
+    platform: 'iOS / Web · React + Vite',
+    overview: 'Elementum is a personal-energy reading product built on the BaZi / 八字 / Four Pillars tradition of Chinese metaphysics. Birth data flows through a deterministic chart calculation into a canonical archetype, then into a layered reading experience and daily guidance. The product is designed around a single tension — ancient seriousness meeting daily accessibility: deep and source-grounded enough to feel uncomfortably accurate, yet calm enough to open before a meeting and get one clear signal. It is not a horoscope app; it is a personal archetype system, deterministic at the calculation layer and emotionally resonant at the reading layer. The visual world is silk paper, ink-wash, bronze, parchment, and restrained Five Element pigments.',
+    responsibilities: [
+      'Defined the entire product — positioning, information architecture, and the Reveal → Reading catalogue → Energy Map flow.',
+      'Designed a locked visual system (color, four-font classical type, spacing, radii, surfaces, and a pigment alpha ladder) documented across eight design legends.',
+      'Built the deterministic BaZi calculation engine — four pillars, hidden stems, strength bands, and useful-god derivation emitting a canonical chart JSON.',
+      'Architected the content pipeline: hand-authored archetype data with a stem × band × pattern variant system and tier-gated readings.',
+      'Implemented the React + Vite app — ritual onboarding, loading ceremony, reveal, and shared component primitives.'
+    ],
+    achievements: [
+      'Deterministic-at-the-core architecture: profile data is the single source of truth, not LLM output.',
+      'Eight sealed design legends defining an ink-wash visual system down to the pigment alpha ladder.',
+      'Ten day-master archetypes with a 50-key interaction taxonomy across three reading layers.',
+      'A four-font classical type system (Cormorant Garamond, EB Garamond, Cinzel, Noto Serif SC) and a five-element pigment palette used sparingly and seriously.'
+    ],
+    technologies: ['React', 'Vite', 'JavaScript', 'Design Systems', 'CSS Tokens', 'BaZi Engine', 'Playwright', 'Figma'],
+    galleryImages: [
+      imgElementumWelcome,
+      imgElementumOnboarding,
+      imgElementumReveal,
+      imgElementumPillars,
+      imgElementumReading,
+      imgElementumElemental,
+      imgElementumToday,
+      imgElementumGuidance,
+      imgElementumCompat,
+      imgElementumWorld
+    ]
   }
 };
 
@@ -420,20 +470,22 @@ export function ProjectDetail() {
         <div className="mb-12 bg-slate-900/50 rounded-xl overflow-hidden border border-cyan-500/20">
           <div className="aspect-video relative">
             {!isVideoPlaying ? (
-              <div 
-                className="relative w-full h-full cursor-pointer group"
-                onClick={() => setIsVideoPlaying(true)}
+              <div
+                className={`relative w-full h-full ${project.videoUrl ? 'cursor-pointer group' : ''}`}
+                onClick={() => project.videoUrl && setIsVideoPlaying(true)}
               >
                 <ImageWithFallback
                   src={project.videoCover || project.image}
-                  alt={`${project.title} video thumbnail`}
+                  alt={project.videoUrl ? `${project.title} video thumbnail` : `${project.title} key art`}
                   className={`w-full h-full object-cover ${id === '4' ? 'object-[center_10%]' : ''}`}
                 />
-                <div className="absolute inset-0 bg-black/40 group-hover:bg-black/30 transition-colors flex items-center justify-center">
-                  <div className="w-16 h-16 sm:w-20 sm:h-20 bg-cyan-500 group-hover:bg-cyan-400 rounded-full flex items-center justify-center transition-all transform group-hover:scale-110">
-                    <Play className="w-8 h-8 sm:w-10 sm:h-10 text-white ml-1" fill="white" />
+                {project.videoUrl && (
+                  <div className="absolute inset-0 bg-black/40 group-hover:bg-black/30 transition-colors flex items-center justify-center">
+                    <div className="w-16 h-16 sm:w-20 sm:h-20 bg-cyan-500 group-hover:bg-cyan-400 rounded-full flex items-center justify-center transition-all transform group-hover:scale-110">
+                      <Play className="w-8 h-8 sm:w-10 sm:h-10 text-white ml-1" fill="white" />
+                    </div>
                   </div>
-                </div>
+                )}
               </div>
             ) : (
               <iframe
@@ -538,13 +590,27 @@ export function ProjectDetail() {
                   <ExternalLink className="w-3 h-3 sm:w-4 sm:h-4" />
                 </a>
               )}
+
+              {/* GitHub Link - Only for Elementum */}
+              {id === '11' && (
+                <a
+                  href="https://github.com/jiaxinxuyago/Elementum"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 sm:gap-3 px-4 sm:px-6 py-3 bg-cyan-600 hover:bg-cyan-500 text-white font-semibold rounded-lg transition-all transform hover:scale-105 hover:shadow-lg hover:shadow-cyan-500/50 text-sm sm:text-base"
+                >
+                  <Github className="w-4 h-4 sm:w-5 sm:h-5" />
+                  <span>View on GitHub</span>
+                  <ExternalLink className="w-3 h-3 sm:w-4 sm:h-4" />
+                </a>
+              )}
             </div>
 
             {/* Achievements / Timeline */}
             {project.achievements && (
               <div className="bg-slate-900/50 rounded-xl p-4 sm:p-6 lg:p-8 border border-cyan-500/20">
                 <h2 className="text-xl sm:text-2xl font-bold text-white mb-6">
-                  {id === '3' ? 'Project Timeline' : 'Achievements'}
+                  {id === '3' ? 'Project Timeline' : (id === '11' ? 'Highlights' : 'Achievements')}
                 </h2>
                 
                 {id === '3' ? (
@@ -614,7 +680,7 @@ export function ProjectDetail() {
             {/* Screenshots */}
             <div className="bg-slate-900/50 rounded-xl p-4 sm:p-6 lg:p-8 border border-cyan-500/20">
               <h2 className="text-xl sm:text-2xl font-bold text-white mb-4">
-                {id === '10' ? 'Others' : (project.galleryVideos ? 'In Game Cinematics' : (id === '2' ? 'The Experience' : (id === '8' ? 'Gallery' : (id === '3' ? 'Development Journey' : 'Details'))))}
+                {id === '10' ? 'Others' : (id === '11' ? 'Inside the App' : (project.galleryVideos ? 'In Game Cinematics' : (id === '2' ? 'The Experience' : (id === '8' ? 'Gallery' : (id === '3' ? 'Development Journey' : 'Details')))))}
               </h2>
               {id === '6' && (
                 <h3 className="text-base sm:text-lg text-cyan-400 mb-4">Thesis Presentation</h3>
@@ -1934,6 +2000,36 @@ void processMessage(String msg) {
 }`}</code>
                       </pre>
                     </div>
+                  </div>
+                </div>
+              </div>
+            )}
+
+            {/* How it's built - Only for Elementum */}
+            {id === '11' && (
+              <div className="bg-slate-900/50 rounded-xl p-4 sm:p-6 lg:p-8 border border-cyan-500/20">
+                <h2 className="text-xl sm:text-2xl font-bold text-white mb-6">How It's Built</h2>
+
+                <div className="space-y-8 text-sm sm:text-base text-gray-300 leading-relaxed">
+                  <div>
+                    <h3 className="text-lg sm:text-xl font-bold text-white mb-3">The Engine — deterministic at the core</h3>
+                    <p>
+                      Every reading rests on a deterministic BaZi calculator. Birth date, exact hour, and place (corrected to true solar time) resolve into four pillars of heavenly stems and earthly branches, hidden stems, seasonal phase, and a day-master strength band. The output is a single canonical chart JSON — the same input always produces the same chart, with anchor tests guarding the formulas. The reference chart used throughout the project is <span className="text-cyan-300">庚 · Yang Metal · “The Blade.”</span>
+                    </p>
+                  </div>
+
+                  <div>
+                    <h3 className="text-lg sm:text-xl font-bold text-white mb-3">The Design System — eight sealed legends</h3>
+                    <p>
+                      The interface is governed by a strict, documented system: a foundation palette of cream, silk, parchment, and bronze; five element pigments used sparingly; a pigment alpha ladder; a fixed set of radii, spacing values, and exactly five card surfaces. Type is a four-font classical stack — Cormorant Garamond for display, EB Garamond for reading, Cinzel for architectural caps, and Noto Serif SC for hanzi. Chinese characters appear as art and authenticity markers; all information stays legible in English.
+                    </p>
+                  </div>
+
+                  <div>
+                    <h3 className="text-lg sm:text-xl font-bold text-white mb-3">The Reading Model — recognition, not information</h3>
+                    <p>
+                      Ten day-master archetypes branch by strength band and Ten-God pattern into a 50-key interaction taxonomy, layered across three depths of reading. Content is hand-authored and shipped as data rather than generated at serve time — declarative, precise, and non-hedging. Free, Seeker, and Advisor tiers progressively unlock domain readings, seasonal calibration, an elemental draw, a personalised manual, and an AI consultant that has read the full chart.
+                    </p>
                   </div>
                 </div>
               </div>
