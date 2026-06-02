@@ -10,8 +10,19 @@ import imgEncounter from "figma:asset/ede4eb82e423235da459a3a9c9ff3df40ca8e3b1.p
 import imgShadesOfThePast from "figma:asset/696281b8280b6fa1d6c3fb24e7caca7d444ac7c2.png";
 import imgFrankLloydWright from "figma:asset/86dbfbf3c2652728b06ac820d1bb4fe064cae795.png";
 import imgProjectC from "figma:asset/2ac29f7b60a780864d25b8273994e1fdee49e811.png";
+import imgElementum from "figma:asset/elementum-hero.jpg";
 
 const projects = [
+  {
+    id: '11',
+    title: 'Elementum',
+    type: 'Mobile App · In Dev',
+    description: 'A personal-energy reading app built on the BaZi (八字 / Four Pillars) tradition — a deterministic metaphysics engine wrapped in a quiet, ink-wash reading experience.',
+    image: imgElementum,
+    date: 'Since 2025',
+    team: 'Jason Xu',
+    tags: ['Product Design', 'Design System', 'React / Vite']
+  },
   {
     id: '1',
     title: "Asgard's Wrath 2",
