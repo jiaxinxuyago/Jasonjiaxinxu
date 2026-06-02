@@ -1,0 +1,11 @@
+{
+  // Serve the built Vite site (dist/) as a static-assets Worker.
+  // Build with `npm run build`, deploy with `npx wrangler deploy`.
+  "name": "jasonjiaxinxu",
+  "compatibility_date": "2025-11-01",
+  "assets": {
+    "directory": "./dist",
+    // serve index.html for unmatched client-side routes (e.g. /projects/11)
+    "not_found_handling": "single-page-application"
+  }
+}
