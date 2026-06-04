@@ -87,7 +87,6 @@ import imgJourneyArc from "figma:asset/journey-arc.jpg";
 import imgJourneyPigment from "figma:asset/journey-pigment.jpg";
 import imgJourneyFoundations from "figma:asset/journey-foundations.jpg";
 import imgJourneyLogos from "figma:asset/journey-logos.jpg";
-import imgJourneyDirections from "figma:asset/journey-directions.jpg";
 import imgJourneyCardDirections from "figma:asset/journey-card-directions.jpg";
 import imgJourneyMoodboard from "figma:asset/journey-moodboard.jpg";
 import imgJourneyLegendPrimitives from "figma:asset/journey-legend-primitives.jpg";
@@ -2454,17 +2453,15 @@ void processMessage(String msg) {
 
                 <div className="space-y-5 text-sm sm:text-base text-gray-300 leading-relaxed">
                   <p>
-                    I generated whole visual and card directions and killed most of them. Showing the rejects matters —
-                    the final language is defined as much by what I cut as by what I kept.
+                    I generated whole card and layout directions and killed most of them. Showing the rejects matters —
+                    the final language is defined as much by what I cut as by what I kept. For the reading catalogue
+                    alone I weighed three density directions side by side before committing.
                   </p>
                 </div>
 
                 <figure className="my-8">
-                  <div className="grid sm:grid-cols-2 gap-4">
-                    <img src={imgJourneyDirections} alt="Explored visual directions" className="w-full rounded-lg border border-cyan-500/15" />
-                    <img src={imgJourneyCardDirections} alt="Explored card directions that were not chosen" className="w-full rounded-lg border border-cyan-500/15" />
-                  </div>
-                  <figcaption className="text-center text-gray-500 text-sm mt-3 italic">Explored-then-cut: visual directions (left) and minimal card directions (right).</figcaption>
+                  <img src={imgJourneyCardDirections} alt="Minimal card directions — three explored reading-catalogue density layouts" className="w-full rounded-xl border border-cyan-500/15" />
+                  <figcaption className="text-center text-gray-500 text-sm mt-3 italic">Explored-then-cut — three reading-catalogue card directions (mini-list, accent tiles, art-band) weighed before settling on one.</figcaption>
                 </figure>
 
                 <figure className="my-8">
