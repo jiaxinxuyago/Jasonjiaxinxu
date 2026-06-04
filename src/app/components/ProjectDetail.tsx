@@ -69,6 +69,37 @@ import imgElementumToday from "figma:asset/elementum-07-today.jpg";
 import imgElementumGuidance from "figma:asset/elementum-08-guidance.jpg";
 import imgElementumCompat from "figma:asset/elementum-09-compat.jpg";
 import imgElementumWorld from "figma:asset/elementum-10-world.jpg";
+import imgJourneyCompass from "figma:asset/journey-compass.jpg";
+import imgJourneyPipeline from "figma:asset/journey-pipeline.jpg";
+import imgJourneyStrength from "figma:asset/journey-strength.jpg";
+import imgJourneyContract from "figma:asset/journey-contract.jpg";
+import imgJourneyFankuan from "figma:asset/journey-fankuan.jpg";
+import imgJourneyProtoChart from "figma:asset/journey-prototype-chart.jpg";
+import imgJourneyProtoReading from "figma:asset/journey-prototype-reading.jpg";
+import imgJourneyProtoReadings from "figma:asset/journey-prototype-readings.jpg";
+import imgJourneyArchetypes from "figma:asset/journey-archetypes.jpg";
+import imgJourneyCocktail from "figma:asset/journey-cocktail.jpg";
+import imgJourneyFiftyKeys from "figma:asset/journey-fifty-keys.jpg";
+import imgJourneyLookup from "figma:asset/journey-lookup.jpg";
+import imgJourneyTiers from "figma:asset/journey-tiers.jpg";
+import imgJourneyVoices from "figma:asset/journey-voices.jpg";
+import imgJourneyArc from "figma:asset/journey-arc.jpg";
+import imgJourneyPigment from "figma:asset/journey-pigment.jpg";
+import imgJourneyFoundations from "figma:asset/journey-foundations.jpg";
+import imgJourneyLogos from "figma:asset/journey-logos.jpg";
+import imgJourneyDirections from "figma:asset/journey-directions.jpg";
+import imgJourneyCardDirections from "figma:asset/journey-card-directions.jpg";
+import imgJourneyMoodboard from "figma:asset/journey-moodboard.jpg";
+import imgJourneyLegendPrimitives from "figma:asset/journey-legend-primitives.jpg";
+import imgJourneyLegendV2 from "figma:asset/journey-legend-v2.jpg";
+import imgJourneyLegendV3 from "figma:asset/journey-legend-v3.jpg";
+import imgJourneyWireframeIa from "figma:asset/journey-wireframe-ia.jpg";
+import imgJourneyWireframeReading from "figma:asset/journey-wireframe-reading.jpg";
+import imgJourneyReadingFinal from "figma:asset/journey-reading-final.jpg";
+import imgJourneyLegendV4 from "figma:asset/journey-legend-v4.jpg";
+import imgJourneyLegendV6 from "figma:asset/journey-legend-v6.jpg";
+import imgJourneyLegendV7 from "figma:asset/journey-legend-v7.jpg";
+import imgJourneyRendered from "figma:asset/journey-rendered.jpg";
 
 const projectData: Record<string, any> = {
   '1': {
@@ -2005,32 +2036,551 @@ void processMessage(String msg) {
               </div>
             )}
 
-            {/* How it's built - Only for Elementum */}
+            {/* The Development Journey - Only for Elementum */}
             {id === '11' && (
               <div className="bg-slate-900/50 rounded-xl p-4 sm:p-6 lg:p-8 border border-cyan-500/20">
-                <h2 className="text-xl sm:text-2xl font-bold text-white mb-6">How It's Built</h2>
+                {/* Section intro */}
+                <div className="mb-10">
+                  <p className="text-cyan-400 text-sm font-semibold tracking-widest uppercase mb-2">The Story</p>
+                  <h2 className="text-2xl sm:text-3xl font-bold text-white mb-3">The Development Journey</h2>
+                  <p className="text-gray-400 text-sm sm:text-base leading-relaxed max-w-3xl">
+                    Elementum grew from a single question into a deterministic calculation engine, a 200-unit
+                    archetype system, a hand-authored reading model, and an ink-wash design language I refined across
+                    seven iterations. This is how I built it — from the first prototype to the current app — told
+                    through my own diagrams, documents, wireframes, and screens. I designed and engineered it solo,
+                    directing AI tools (a design canvas, image models) as part of the pipeline.
+                  </p>
+                </div>
 
-                <div className="space-y-8 text-sm sm:text-base text-gray-300 leading-relaxed">
-                  <div>
-                    <h3 className="text-lg sm:text-xl font-bold text-white mb-3">The Engine — deterministic at the core</h3>
-                    <p>
-                      Every reading rests on a deterministic BaZi calculator. Birth date, exact hour, and place (corrected to true solar time) resolve into four pillars of heavenly stems and earthly branches, hidden stems, seasonal phase, and a day-master strength band. The output is a single canonical chart JSON — the same input always produces the same chart, with anchor tests guarding the formulas. The reference chart used throughout the project is <span className="text-cyan-300">庚 · Yang Metal · “The Blade.”</span>
-                    </p>
+                {/* ===================== CHAPTER 1 — THE IDEA ===================== */}
+                <div className="flex items-center gap-4 mb-6 pt-2 border-t border-cyan-500/10">
+                  <span className="text-5xl sm:text-6xl font-bold text-cyan-500/25 leading-none mt-4">01</span>
+                  <div className="mt-4">
+                    <p className="text-cyan-400 text-xs font-semibold tracking-widest uppercase">Chapter One</p>
+                    <h3 className="text-xl sm:text-2xl font-bold text-white">The Idea</h3>
                   </div>
+                </div>
 
-                  <div>
-                    <h3 className="text-lg sm:text-xl font-bold text-white mb-3">The Design System — eight sealed legends</h3>
-                    <p>
-                      The interface is governed by a strict, documented system: a foundation palette of cream, silk, parchment, and bronze; five element pigments used sparingly; a pigment alpha ladder; a fixed set of radii, spacing values, and exactly five card surfaces. Type is a four-font classical stack — Cormorant Garamond for display, EB Garamond for reading, Cinzel for architectural caps, and Noto Serif SC for hanzi. Chinese characters appear as art and authenticity markers; all information stays legible in English.
-                    </p>
-                  </div>
+                <div className="space-y-5 text-sm sm:text-base text-gray-300 leading-relaxed">
+                  <p>
+                    Elementum began with a question: could <span className="text-white font-medium">BaZi</span> (八字 /
+                    Four Pillars) — one of the oldest systems of Chinese metaphysics — be rebuilt as something a modern
+                    person would actually open every day? Not a horoscope. Not a fortune-cookie generator. A serious,
+                    source-grounded reading of personal energy that still fits in the seven minutes before a meeting.
+                  </p>
+                  <p>
+                    Getting the positioning right meant being precise about what it is <em>not</em> — every rejected
+                    framing sharpened the one I kept.
+                  </p>
+                </div>
 
-                  <div>
-                    <h3 className="text-lg sm:text-xl font-bold text-white mb-3">The Reading Model — recognition, not information</h3>
-                    <p>
-                      Ten day-master archetypes branch by strength band and Ten-God pattern into a 50-key interaction taxonomy, layered across three depths of reading. Content is hand-authored and shipped as data rather than generated at serve time — declarative, precise, and non-hedging. Free, Seeker, and Advisor tiers progressively unlock domain readings, seasonal calibration, an elemental draw, a personalised manual, and an AI consultant that has read the full chart.
-                    </p>
+                {/* is NOT / is */}
+                <div className="grid sm:grid-cols-2 gap-4 my-8">
+                  <div className="bg-slate-950/40 rounded-xl p-5 border border-rose-500/20">
+                    <p className="text-rose-300/80 text-xs font-semibold tracking-widest uppercase mb-3">Elementum is not</p>
+                    <ul className="space-y-2 text-sm text-gray-400">
+                      <li>· a horoscope app</li>
+                      <li>· a fortune-cookie generator</li>
+                      <li>· a generic astrology chatbot</li>
+                      <li>· a Western quiz with Chinese labels pasted on</li>
+                      <li>· a dense BaZi calculator for experts</li>
+                    </ul>
                   </div>
+                  <div className="bg-slate-950/40 rounded-xl p-5 border border-cyan-500/30">
+                    <p className="text-cyan-300 text-xs font-semibold tracking-widest uppercase mb-3">Elementum is</p>
+                    <ul className="space-y-2 text-sm text-gray-300">
+                      <li>· a personal archetype &amp; energy-reading system</li>
+                      <li>· deterministic at the calculation layer</li>
+                      <li>· source-grounded at the metaphysical layer</li>
+                      <li>· emotionally resonant at the reading layer</li>
+                      <li>· readable without knowing any Chinese metaphysics</li>
+                    </ul>
+                  </div>
+                </div>
+
+                <div className="space-y-5 text-sm sm:text-base text-gray-300 leading-relaxed">
+                  <p>
+                    Every decision after that served a single tension: <span className="text-white font-medium">ancient
+                    seriousness</span> held against <span className="text-white font-medium">daily accessibility</span>.
+                    The reading has to feel deep and real — precise enough to feel uncomfortably accurate — while still
+                    delivering one clear signal at a glance.
+                  </p>
+                </div>
+
+                <figure className="my-8">
+                  <img src={imgJourneyCompass} alt="The governing tension — ancient seriousness held against daily accessibility, balanced on 'a recognition event, not an information delivery'" className="w-full rounded-xl border border-cyan-500/15" />
+                  <figcaption className="text-center text-gray-500 text-sm mt-3 italic">The compass the whole product is built around — a recognition event, never an information delivery.</figcaption>
+                </figure>
+
+                <div className="space-y-5 text-sm sm:text-base text-gray-300 leading-relaxed">
+                  <p>
+                    Three principles fell out of that tension and never moved: <span className="text-cyan-300">the
+                    reading is a recognition event, not an information delivery</span>; <span className="text-cyan-300">Chinese
+                    is treated as art, English as information</span> (the hanzi create atmosphere; everything that carries
+                    meaning is in plain English); and <span className="text-cyan-300">depth on demand</span> — one signal
+                    on the surface, a whole codex underneath.
+                  </p>
+                  <p>
+                    One reference user kept me honest the entire way — <span className="text-white font-medium">庚, Yang
+                    Metal, "The Blade": <em>Precision before intention.</em></span> Every system below is shown through
+                    this one chart.
+                  </p>
+                </div>
+
+                <figure className="my-8">
+                  <img src={imgJourneyFankuan} alt="An Elementum ink-wash landscape study — mist, mountains, and water" className="w-full rounded-xl border border-cyan-500/15 bg-[#F1E9D6]" />
+                  <figcaption className="text-center text-gray-500 text-sm mt-3 italic">Before a single screen was designed, the visual world was developed as ink-wash landscape studies — drawn from the masters (Fan Kuan, Ma Yuan, Bada Shanren, Shi Tao).</figcaption>
+                </figure>
+
+                <div className="space-y-5 text-sm sm:text-base text-gray-300 leading-relaxed">
+                  <p>
+                    It started simpler. My early prototype (V005) used a plainer visual language — well before the
+                    ink-wash system — but it proved the core loop was real: birth data in, a computed chart and a
+                    layered reading out.
+                  </p>
+                </div>
+
+                <figure className="my-8">
+                  <div className="grid grid-cols-3 gap-3">
+                    <img src={imgJourneyProtoChart} alt="V005 prototype — birth chart" className="w-full rounded-lg border border-cyan-500/15" />
+                    <img src={imgJourneyProtoReading} alt="V005 prototype — day reading" className="w-full rounded-lg border border-cyan-500/15" />
+                    <img src={imgJourneyProtoReadings} alt="V005 prototype — readings list" className="w-full rounded-lg border border-cyan-500/15" />
+                  </div>
+                  <figcaption className="text-center text-gray-500 text-sm mt-3 italic">Prototype V005 — the rough first loop. Everything after this was about making it serious, then making it beautiful.</figcaption>
+                </figure>
+
+                {/* ===================== CHAPTER 2 — THE ENGINE ===================== */}
+                <div className="flex items-center gap-4 mb-6 mt-14 pt-2 border-t border-cyan-500/10">
+                  <span className="text-5xl sm:text-6xl font-bold text-cyan-500/25 leading-none mt-4">02</span>
+                  <div className="mt-4">
+                    <p className="text-cyan-400 text-xs font-semibold tracking-widest uppercase">Chapter Two</p>
+                    <h3 className="text-xl sm:text-2xl font-bold text-white">The Engine</h3>
+                  </div>
+                </div>
+
+                <div className="space-y-5 text-sm sm:text-base text-gray-300 leading-relaxed">
+                  <p>
+                    Under the poetry sits something unglamorous and non-negotiable: a deterministic calculation engine
+                    I wrote in plain JavaScript. I gave it one cardinal rule — <span className="text-white font-medium">the
+                    language model never sees your raw birth data.</span> It only ever receives a fully computed,
+                    validated object. If that separation breaks, readings carry calculation errors that quietly
+                    destroy trust.
+                  </p>
+                  <p>
+                    Birth date, exact hour, and place (corrected to true solar time) are resolved step by step into the
+                    Four Pillars, their hidden stems, an element composition, a strength band, and a "useful god" — then
+                    frozen into one canonical object.
+                  </p>
+                </div>
+
+                <figure className="my-8">
+                  <img src={imgJourneyPipeline} alt="The deterministic pipeline: birth data → four pillars → hidden stems → strength gate → useful god → canonical JSON" className="w-full rounded-xl border border-cyan-500/15" />
+                  <figcaption className="text-center text-gray-500 text-sm mt-3 italic">The deterministic pipeline. Layer 1 is pure JavaScript — every stem × strength verified against classical sources.</figcaption>
+                </figure>
+
+                <div className="space-y-5 text-sm sm:text-base text-gray-300 leading-relaxed">
+                  <p>
+                    The hardest single problem I faced was <span className="text-white font-medium">strength</span>: how
+                    strong is your day master? My early versions counted characters — crude, and often wrong. The model I
+                    shipped is a hybrid of four classical methods (<span className="text-cyan-300">C + D + B + A</span>):
+                    position weights, hidden-stem theory, seasonal-phase multipliers, and the 得令·得地·得势 gate check.
+                    Five strengths collapse into three bands that the rest of the system reads from.
+                  </p>
+                </div>
+
+                <figure className="my-8">
+                  <img src={imgJourneyStrength} alt="The strength model — a hybrid of four classical methods feeding a gate check that resolves to three bands" className="w-full rounded-xl border border-cyan-500/15" />
+                  <figcaption className="text-center text-gray-500 text-sm mt-3 italic">Replacing a naïve character count with a weighted model. The month branch alone carries 40% of the verdict.</figcaption>
+                </figure>
+
+                <div className="space-y-5 text-sm sm:text-base text-gray-300 leading-relaxed">
+                  <p>
+                    Everything resolves into a single locked object — the contract between the engine and every layer
+                    above it. The same input always produces the same chart, guarded by anchor tests. The canonical
+                    reference used to verify every formula is <span className="text-white font-medium">庚 The Blade</span>:
+                    born 1995-04-29 in Beijing → <span className="text-cyan-300">乙亥 庚辰 庚寅 乙酉</span>, extremely
+                    strong (0.92), concentrated, missing Fire.
+                  </p>
+                </div>
+
+                <figure className="my-8">
+                  <img src={imgElementumPillars} alt="The four pillars of 庚 The Blade rendered in the app, day pillar highlighted" className="w-full rounded-xl border border-cyan-500/15" />
+                  <figcaption className="text-center text-gray-500 text-sm mt-3 italic">The same chart in the app — 乙亥 庚辰 庚寅 乙酉, with the day pillar (庚寅) held as the self.</figcaption>
+                </figure>
+
+                <figure className="my-8">
+                  <img src={imgJourneyContract} alt="The canonical chart JSON contract and the 庚 reference chart values" className="w-full rounded-xl border border-cyan-500/15" />
+                  <figcaption className="text-center text-gray-500 text-sm mt-3 italic">The locked canonical JSON — what every reading, tier, and screen is ultimately built from.</figcaption>
+                </figure>
+
+                {/* ===================== CHAPTER 3 — THE ARCHETYPE ARCHITECTURE ===================== */}
+                <div className="flex items-center gap-4 mb-6 mt-14 pt-2 border-t border-cyan-500/10">
+                  <span className="text-5xl sm:text-6xl font-bold text-cyan-500/25 leading-none mt-4">03</span>
+                  <div className="mt-4">
+                    <p className="text-cyan-400 text-xs font-semibold tracking-widest uppercase">Chapter Three</p>
+                    <h3 className="text-xl sm:text-2xl font-bold text-white">The Archetype Architecture</h3>
+                  </div>
+                </div>
+
+                <div className="space-y-5 text-sm sm:text-base text-gray-300 leading-relaxed">
+                  <p>
+                    A chart isn't a personality type — it's a structure. So instead of sorting people into ten boxes, I
+                    built identity as a <span className="text-white font-medium">layered cocktail</span>: a stack of
+                    lenses that compose differently for every chart. The premise that shaped everything —
+                    <span className="text-cyan-300"> the same day master under different dominant energies is a
+                    categorically different person.</span>
+                  </p>
+                  <p>
+                    It starts with the day master itself — one of ten archetypes, the five elements each split into yang
+                    and yin. Every one gets a glyph, a name, and a one-line manifesto. These are the surface identities,
+                    the part a person first recognizes as themselves.
+                  </p>
+                </div>
+
+                <figure className="my-8">
+                  <img src={imgJourneyArchetypes} alt="The ten day-master archetypes — five elements split yang and yin, each with a glyph, name, and manifesto" className="w-full rounded-xl border border-cyan-500/15" />
+                  <figcaption className="text-center text-gray-500 text-sm mt-3 italic">The ten day masters. 庚 The Blade — the reference chart — is the one I hand-authored to full fidelity first.</figcaption>
+                </figure>
+
+                <div className="space-y-5 text-sm sm:text-base text-gray-300 leading-relaxed">
+                  <p>
+                    In the app, that archetype becomes <span className="text-white font-medium">the Reveal</span> — the
+                    first screen after onboarding. I designed it as a recognition event, not a data table: the blade
+                    lands first, alone, before any words; the name and manifesto settle in after.
+                  </p>
+                </div>
+
+                <figure className="my-8">
+                  <img src={imgElementumReveal} alt="The Reveal screen — 庚 The Blade identity card" className="w-full rounded-xl border border-cyan-500/15" />
+                  <figcaption className="text-center text-gray-500 text-sm mt-3 italic">The Reveal — the Tier-1 identity, staged as a moment rather than a readout.</figcaption>
+                </figure>
+
+                <div className="space-y-5 text-sm sm:text-base text-gray-300 leading-relaxed">
+                  <p>
+                    Underneath the name, I compute identity in three independent layers and read them together: a
+                    <span className="text-white font-medium"> base identity</span> (stem × band × pattern), the
+                    <span className="text-white font-medium"> dominant energy</span> (the loudest non-self element, read
+                    through its Ten-God relationship to you), and the <span className="text-white font-medium">secondary
+                    energy</span>. That's <span className="text-cyan-300">150 base keys + 50 + 50 = 200</span>{' '}
+                    hand-authored content units — the synthesis of all three is the reading.
+                  </p>
+                </div>
+
+                <figure className="my-8">
+                  <img src={imgJourneyCocktail} alt="The three identity layers — base, dominant, secondary — and how they derive The Blade" className="w-full rounded-xl border border-cyan-500/15 bg-[#F1E9D6]" />
+                  <figcaption className="text-center text-gray-500 text-sm mt-3 italic">Three layers, derived independently, read as one. The Blade resolves to base 庚_concentrated_pure, dominant 金_比肩, secondary 木_正财.</figcaption>
+                </figure>
+
+                <div className="space-y-5 text-sm sm:text-base text-gray-300 leading-relaxed">
+                  <p>
+                    The interaction layer looked like it should be enormous — day-master element × dominant element ×
+                    Ten God. But there's a quiet piece of structure hiding in it: <span className="text-white font-medium">given
+                    the dominant element and the Ten God, exactly one day-master element can produce that
+                    relationship.</span> The 3-D space collapses to 50. That one realization is what made the whole
+                    content system authorable by a single person instead of a team.
+                  </p>
+                </div>
+
+                <figure className="my-8">
+                  <img src={imgJourneyFiftyKeys} alt="The 3-D archetype space collapsing to a 5×10 / 50-key matrix" className="w-full rounded-xl border border-cyan-500/15 bg-[#F1E9D6]" />
+                  <figcaption className="text-center text-gray-500 text-sm mt-3 italic">Each cell is the single day-master element implied by a dominant-element × ten-god pair — the collapse, made literal.</figcaption>
+                </figure>
+
+                {/* ===================== CHAPTER 4 — THE READING MODEL ===================== */}
+                <div className="flex items-center gap-4 mb-6 mt-14 pt-2 border-t border-cyan-500/10">
+                  <span className="text-5xl sm:text-6xl font-bold text-cyan-500/25 leading-none mt-4">04</span>
+                  <div className="mt-4">
+                    <p className="text-cyan-400 text-xs font-semibold tracking-widest uppercase">Chapter Four</p>
+                    <h3 className="text-xl sm:text-2xl font-bold text-white">The Reading Model</h3>
+                  </div>
+                </div>
+
+                <div className="space-y-5 text-sm sm:text-base text-gray-300 leading-relaxed">
+                  <p>
+                    A chart that's correct but reads like a textbook fails. The whole product rests on one line I kept
+                    coming back to: <span className="text-cyan-300">the reading is a recognition event, not an
+                    information delivery.</span> So I built the content layer like writing, not like a database — even
+                    though it's served like one.
+                  </p>
+                  <p>
+                    At serve time there's no model in the loop at all. The computed key cascades through a waterfall of
+                    lookups — the exact variant, then the per-stem baseline, then the hand-authored source — and the
+                    first match wins. Free and Seeker readings are pure static reads; I hand-authored the fields and ship
+                    them as data.
+                  </p>
+                </div>
+
+                <figure className="my-8">
+                  <img src={imgJourneyLookup} alt="The two-level content lookup — configKey falls back to per-stem baseline to source of truth" className="w-full rounded-xl border border-cyan-500/15" />
+                  <figcaption className="text-center text-gray-500 text-sm mt-3 italic">Serving a reading is a key lookup with fallbacks — fast, deterministic, and free of any model call.</figcaption>
+                </figure>
+
+                <figure className="my-8">
+                  <img src={imgElementumElemental} alt="A long-form elemental-nature reading in the app" className="w-full rounded-xl border border-cyan-500/15" />
+                  <figcaption className="text-center text-gray-500 text-sm mt-3 italic">The output: a long-form reading that should feel like being seen, not informed.</figcaption>
+                </figure>
+
+                <div className="space-y-5 text-sm sm:text-base text-gray-300 leading-relaxed">
+                  <p>
+                    Three tiers gate <em>depth</em>, not truth. Free gives the core identity and one daily signal; Seeker
+                    unlocks the full readings, domain signatures, and seasonal calibration; Advisor adds the only place a
+                    language model ever generates anything — an on-purchase self-report synthesis. Profile data is the
+                    single source of truth; the model is an editor, never the author.
+                  </p>
+                </div>
+
+                <figure className="my-8">
+                  <img src={imgJourneyTiers} alt="The Free / Seeker / Advisor tier ladder" className="w-full rounded-xl border border-cyan-500/15 bg-[#F1E9D6]" />
+                  <figcaption className="text-center text-gray-500 text-sm mt-3 italic">Free &amp; Seeker are static data; only the paid self-report synthesis ever calls a model.</figcaption>
+                </figure>
+
+                <div className="space-y-5 text-sm sm:text-base text-gray-300 leading-relaxed">
+                  <p>
+                    Every reading is voiced in the day master's element — five registers, each with its own rhythm.
+                    Metal arrives as a conclusion; Water trails off where Metal would stop.
+                  </p>
+                </div>
+
+                <figure className="my-8">
+                  <img src={imgJourneyVoices} alt="The five elemental voice registers" className="w-full rounded-xl border border-cyan-500/15 bg-[#F1E9D6]" />
+                  <figcaption className="text-center text-gray-500 text-sm mt-3 italic">Five voice registers — the reading sounds like your element, not like an app.</figcaption>
+                </figure>
+
+                <div className="space-y-5 text-sm sm:text-base text-gray-300 leading-relaxed">
+                  <p>And one hard rule — no jargon ever reaches the reader. These words are permanently banned from output:</p>
+                </div>
+                <div className="my-6 bg-slate-950/40 rounded-xl p-5 border border-rose-500/20">
+                  <div className="flex flex-wrap gap-2">
+                    {['Day Master','Ten Gods','Four Pillars','BaZi','Food God','Seven Killings','the universe','cosmic','destiny','fate','zodiac','spiritual','empowered','“at your core”','“in essence”'].map((w) => (
+                      <span key={w} className="px-3 py-1 bg-rose-500/10 text-rose-200/70 text-xs rounded-full line-through decoration-rose-400/40">{w}</span>
+                    ))}
+                  </div>
+                </div>
+                <div className="space-y-5 text-sm sm:text-base text-gray-300 leading-relaxed">
+                  <p>
+                    The deepest cards follow one emotional arc — <span className="text-cyan-300">recognition →
+                    explanation → intimacy → relief → orientation</span> — spread across thirteen fields, so the reader
+                    feels seen before they're ever challenged.
+                  </p>
+                </div>
+
+                <figure className="my-8">
+                  <img src={imgJourneyArc} alt="The thirteen-field emotional arc of a compound reading card" className="w-full rounded-xl border border-cyan-500/15 bg-[#F1E9D6]" />
+                  <figcaption className="text-center text-gray-500 text-sm mt-3 italic">Thirteen fields plotted along one emotional arc — the structure underneath every deep reading.</figcaption>
+                </figure>
+
+                {/* ===================== CHAPTER 5 — THE DESIGN SYSTEM ===================== */}
+                <div className="flex items-center gap-4 mb-6 mt-14 pt-2 border-t border-cyan-500/10">
+                  <span className="text-5xl sm:text-6xl font-bold text-cyan-500/25 leading-none mt-4">05</span>
+                  <div className="mt-4">
+                    <p className="text-cyan-400 text-xs font-semibold tracking-widest uppercase">Chapter Five</p>
+                    <h3 className="text-xl sm:text-2xl font-bold text-white">The Design System</h3>
+                  </div>
+                </div>
+
+                <div className="space-y-5 text-sm sm:text-base text-gray-300 leading-relaxed">
+                  <p>
+                    The visual system had to do two things at once: feel like an aged silk-paper codex without ever using
+                    a literal texture, and stay disciplined enough that I — working solo across hundreds of screens —
+                    couldn't quietly drift out of it. So I built it as a <span className="text-white font-medium">constraint
+                    system</span>, not a style.
+                  </p>
+                  <p>
+                    The signature constraint is the <span className="text-white font-medium">pigment ladder</span>. Each
+                    of the five element colors appears at exactly five strengths — one per surface type. No intermediate
+                    alpha values are allowed to exist.
+                  </p>
+                </div>
+
+                <figure className="my-8">
+                  <img src={imgJourneyPigment} alt="The pigment alpha ladder — five strengths, one per surface type" className="w-full rounded-xl border border-cyan-500/15 bg-[#F1E9D6]" />
+                  <figcaption className="text-center text-gray-500 text-sm mt-3 italic">One alpha per surface — the rule that keeps the whole ink-wash palette coherent.</figcaption>
+                </figure>
+
+                <div className="space-y-5 text-sm sm:text-base text-gray-300 leading-relaxed">
+                  <p>
+                    On top of that: four classical fonts, a fixed foundation palette, six allowed corner radii, a set
+                    spacing scale, and exactly five card surfaces. Chinese characters appear only as art and authenticity
+                    markers; everything that carries meaning stays in English.
+                  </p>
+                </div>
+
+                <figure className="my-8">
+                  <img src={imgJourneyFoundations} alt="The design foundations — four fonts, the element palette, radii, and card surfaces" className="w-full rounded-xl border border-cyan-500/15 bg-[#F1E9D6]" />
+                  <figcaption className="text-center text-gray-500 text-sm mt-3 italic">Four fonts, five element pigments (each with a deep companion), six radii, five surfaces.</figcaption>
+                </figure>
+
+                <div className="space-y-5 text-sm sm:text-base text-gray-300 leading-relaxed">
+                  <p>
+                    All of it lives in a set of living "design legends" — interactive HTML documents that are the source
+                    of truth the app is built against, not slides about it.
+                  </p>
+                </div>
+
+                <figure className="my-8">
+                  <img src={imgJourneyLegendPrimitives} alt="The design-legend document defining the primitive tokens" className="w-full rounded-xl border border-cyan-500/15" />
+                  <figcaption className="text-center text-gray-500 text-sm mt-3 italic">The primitives legend — color, type, spacing, surfaces, and the anti-patterns, all documented as runnable HTML.</figcaption>
+                </figure>
+
+                {/* ===================== CHAPTER 6 — THE DESIGN EVOLUTION ===================== */}
+                <div className="flex items-center gap-4 mb-6 mt-14 pt-2 border-t border-cyan-500/10">
+                  <span className="text-5xl sm:text-6xl font-bold text-cyan-500/25 leading-none mt-4">06</span>
+                  <div className="mt-4">
+                    <p className="text-cyan-400 text-xs font-semibold tracking-widest uppercase">Chapter Six</p>
+                    <h3 className="text-xl sm:text-2xl font-bold text-white">The Design Evolution</h3>
+                  </div>
+                </div>
+
+                <div className="space-y-5 text-sm sm:text-base text-gray-300 leading-relaxed">
+                  <p>
+                    None of this arrived fully formed — the visual system was built across seven sealed iterations, and
+                    how I built it is part of the story. I ran AI tools as a design studio: a
+                    <span className="text-white font-medium"> Claude design canvas</span> to generate and refine the
+                    HTML/SVG "legends," and <span className="text-white font-medium">image models (ChatGPT / DALL·E)</span>
+                    for the painted ink-wash assets — while I held the art direction, the constraints, and every yes/no.
+                    A human-directed pipeline, not prompt-and-pray.
+                  </p>
+                  <p>
+                    It started with the mark. Before the yin-yang circle everyone knows, I went back to the source — the
+                    single <span className="font-['Noto_Serif_SC'] text-white">爻</span> (yao) line, the trigram, the
+                    Ming-era river chart — and explored logos rooted in each.
+                  </p>
+                </div>
+
+                <figure className="my-8">
+                  <img src={imgJourneyLogos} alt="Logo explorations rooted in classical 易经 forms" className="w-full rounded-xl border border-cyan-500/15" />
+                  <figcaption className="text-center text-gray-500 text-sm mt-3 italic">Brand origins — five logo directions, each descended from a specific classical form.</figcaption>
+                </figure>
+
+                <div className="space-y-5 text-sm sm:text-base text-gray-300 leading-relaxed">
+                  <p>
+                    I generated whole visual and card directions and killed most of them. Showing the rejects matters —
+                    the final language is defined as much by what I cut as by what I kept.
+                  </p>
+                </div>
+
+                <figure className="my-8">
+                  <div className="grid sm:grid-cols-2 gap-4">
+                    <img src={imgJourneyDirections} alt="Explored visual directions" className="w-full rounded-lg border border-cyan-500/15" />
+                    <img src={imgJourneyCardDirections} alt="Explored card directions that were not chosen" className="w-full rounded-lg border border-cyan-500/15" />
+                  </div>
+                  <figcaption className="text-center text-gray-500 text-sm mt-3 italic">Explored-then-cut: visual directions (left) and minimal card directions (right).</figcaption>
+                </figure>
+
+                <figure className="my-8">
+                  <img src={imgJourneyMoodboard} alt="Ink-wash thumbnail-card moodboard" className="w-full rounded-xl border border-cyan-500/15" />
+                  <figcaption className="text-center text-gray-500 text-sm mt-3 italic">The aesthetic, pinned: one ink-wash treatment, pigment at fixed strengths, and the unbreakable rule — text never sits on un-scrimmed art.</figcaption>
+                </figure>
+
+                <div className="space-y-5 text-sm sm:text-base text-gray-300 leading-relaxed">
+                  <p>
+                    Before polishing pixels I worked the information architecture in low-fi. The reading catalogue went
+                    through several wireframe rounds — "same content, same IA, three skeletons" — before I committed to
+                    a layout.
+                  </p>
+                </div>
+
+                <figure className="my-8">
+                  <div className="grid grid-cols-2 gap-4 items-start">
+                    <div>
+                      <img src={imgJourneyWireframeReading} alt="Reading catalogue wireframes" className="w-full rounded-lg border border-cyan-500/15" />
+                      <p className="text-center text-gray-500 text-xs mt-2">Wireframe — three structural options</p>
+                    </div>
+                    <div>
+                      <img src={imgJourneyReadingFinal} alt="Reading catalogue final" className="w-full rounded-lg border border-cyan-500/15" />
+                      <p className="text-center text-gray-500 text-xs mt-2">Final — resolved &amp; painted</p>
+                    </div>
+                  </div>
+                  <figcaption className="text-center text-gray-500 text-sm mt-3 italic">Wireframe → final. The structure was decided in grayscale; the painting came last.</figcaption>
+                </figure>
+
+                <div className="space-y-5 text-sm sm:text-base text-gray-300 leading-relaxed">
+                  <p>
+                    Not every version was right. v3 made the wrong call — it flattened the ceremonial Reveal into the
+                    dashboard. An amendment reversed it, restoring the layered <span className="text-cyan-300">Reveal →
+                    Reading catalogue → Energy Map</span> flow and locking an icons-only tab bar.
+                  </p>
+                </div>
+
+                <figure className="my-8">
+                  <img src={imgJourneyLegendV3} alt="v3 screens legend — the IA that was later reversed" className="w-full rounded-xl border border-cyan-500/15" />
+                  <figcaption className="text-center text-gray-500 text-sm mt-3 italic">v3 · Screens — the full dashboard IA. The good kind of mistake: clear enough to see was wrong, and fix.</figcaption>
+                </figure>
+
+                <div className="space-y-5 text-sm sm:text-base text-gray-300 leading-relaxed">
+                  <p>
+                    From v4 on, the system found its surface. v4 commissioned real sumi-e brushwork for the ten
+                    day-master icons; v6 codified the card archetypes; and v7 was the breakthrough — studying actual
+                    master paintings (Fan Kuan, Ma Yuan, Bada Shanren, Shi Tao) to use their negative space, 留白, as a
+                    structural device. Flat silk was retired for <span className="text-white font-medium">composed
+                    silk</span>: the painting <em>is</em> the screen.
+                  </p>
+                </div>
+
+                <figure className="my-8">
+                  <div className="grid sm:grid-cols-2 gap-4">
+                    <img src={imgJourneyLegendV4} alt="v4 polish legend — ink-wash day-master icons" className="w-full rounded-lg border border-cyan-500/15" />
+                    <img src={imgJourneyLegendV6} alt="v6 legend — card archetypes" className="w-full rounded-lg border border-cyan-500/15" />
+                  </div>
+                  <figcaption className="text-center text-gray-500 text-sm mt-3 italic">v4 · ink-wash icons (left) and v6 · card archetypes (right) — the system gaining craft.</figcaption>
+                </figure>
+
+                <figure className="my-8">
+                  <img src={imgJourneyLegendV7} alt="v7 ink-wash legend — the painterly background plates" className="w-full rounded-xl border border-cyan-500/15" />
+                  <figcaption className="text-center text-gray-500 text-sm mt-3 italic">v7 · Ink-wash — the fidelity benchmark. Scenery painted into the margins; a quiet zone left for the words.</figcaption>
+                </figure>
+
+                <div className="space-y-5 text-sm sm:text-base text-gray-300 leading-relaxed">
+                  <p>
+                    Pulled all the way through, the system produces finished screens where every card, tab, and footer is
+                    one shared token system, and the ink-wash carries the meaning.
+                  </p>
+                </div>
+
+                <figure className="my-8">
+                  <img src={imgJourneyRendered} alt="Finished rendered app screens on the canonical token system" className="w-full rounded-xl border border-cyan-500/15" />
+                  <figcaption className="text-center text-gray-500 text-sm mt-3 italic">The rendered app — twelve product screens on the v7 system.</figcaption>
+                </figure>
+
+                {/* ===================== CHAPTER 7 — WHERE IT IS NOW ===================== */}
+                <div className="flex items-center gap-4 mb-6 mt-14 pt-2 border-t border-cyan-500/10">
+                  <span className="text-5xl sm:text-6xl font-bold text-cyan-500/25 leading-none mt-4">07</span>
+                  <div className="mt-4">
+                    <p className="text-cyan-400 text-xs font-semibold tracking-widest uppercase">Chapter Seven</p>
+                    <h3 className="text-xl sm:text-2xl font-bold text-white">Where It Is Now</h3>
+                  </div>
+                </div>
+
+                <div className="space-y-5 text-sm sm:text-base text-gray-300 leading-relaxed">
+                  <p>
+                    The foundations are done and verified: the deterministic engine (passing its anchor tests), the
+                    200-unit archetype system, the hand-authored reading model, and the v7 design language. The React +
+                    Vite app has the pre-dashboard flow built — welcome, the seven-step onboarding, the loading ceremony,
+                    the Reveal, and the energy blueprint — with the dashboard screens (Reading catalogue, Energy Map,
+                    Today, Guidance, Compatibility, Profile) actively being built against the rendered designs.
+                  </p>
+                  <p>
+                    What's next: promoting the v7 ink-wash to all ten day-master icons, wiring the icons-only tab bar, and
+                    building out the reading catalogue. Of the ten archetypes, 庚 The Blade is finished to full fidelity —
+                    the reference the other nine are measured against.
+                  </p>
+                </div>
+
+                <div className="my-8 grid grid-cols-2 sm:grid-cols-3 gap-3">
+                  {[['10','day-master archetypes'],['200','hand-authored content units'],['50','interaction-key taxonomy'],['7','sealed design iterations'],['4','classical fonts'],['1','deterministic engine, zero LLM at serve time']].map(([n,l]) => (
+                    <div key={l} className="bg-slate-950/40 rounded-xl p-4 border border-cyan-500/15 text-center">
+                      <div className="text-2xl sm:text-3xl font-bold text-cyan-300">{n}</div>
+                      <div className="text-gray-400 text-xs mt-1 leading-snug">{l}</div>
+                    </div>
+                  ))}
+                </div>
+
+                <div className="space-y-5 text-sm sm:text-base text-gray-300 leading-relaxed">
+                  <p className="text-center italic text-gray-400 max-w-2xl mx-auto">
+                    “Elementum should feel like opening a private silk-paper codex that knows your energetic structure —
+                    deterministic underneath, poetic on the surface, restrained in UI, and precise enough to feel
+                    uncomfortably accurate.”
+                  </p>
                 </div>
               </div>
             )}
